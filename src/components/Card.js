@@ -5,10 +5,7 @@ const Card = () => {
   return (
     <>
         <CardItem/>
-        <CardItem/>
-        <CardItem/>
-        <CardItem/>
-        <CardItem/>
+        
     </>
   )
 }

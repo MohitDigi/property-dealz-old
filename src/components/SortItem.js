@@ -14,19 +14,18 @@ const items = [
 
 const SortItem = () => {
   return (
-    <Row style={{ display: "flex", justifyContent: "space-between" }}>
+    <Row>
       <Col>
         <p style={{ fontSize: "1.2rem" }}>
           <strong >20</strong> Properties Available
         </p>
       </Col>
-      <Col>
+      <Col offset={16}>
         <Dropdown
           menu={{
             items,
           }}
-          trigger={["click"]}
-          
+          trigger={["click"]}  
         >
           <Button
             type="text"
@@ -34,9 +33,9 @@ const SortItem = () => {
               fontSize: "1.2rem",
             }}
           >
-            {" "}
             <img
               src={sort_icon}
+              alt="sort-icon"
               style={{
                 width: "18px",
                 margin: "0 3px",

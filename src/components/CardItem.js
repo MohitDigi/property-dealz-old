@@ -1,18 +1,29 @@
 import React from "react";
-import { Row, Col } from "antd";
-import Data from "../properties";
+import { Row, Col, Card } from "antd";
+import { Data } from "../properties";
+import img from "../images/bed-icon.svg";
+
+console.log(Data);
 
 const CardItem = () => {
   return (
     <>
-      {Data.map((item,id) => {
+      {Data.map((item) => {
         return (
-          <Col key={id}>
-            <div className="card-item">
-              <img src={item.img} alt={item.name} />
-              <h3>{item.name}</h3>
-            </div>
-          </Col>
+          <Row key={item.id}>
+            <Card
+              title="Card title"
+              bordered={false}
+              style={{
+                width: 300,
+              }}
+            >
+              <p>Card content</p>
+              <p>Card content</p>
+              <p>Card content</p>
+            </Card>
+            hello
+          </Row>
         );
       })}
     </>

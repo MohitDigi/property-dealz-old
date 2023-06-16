@@ -1,30 +1,31 @@
-import { Col, Layout, Row } from "antd";
-// const { Header, Footer, Sider, Content } = Layout;
 import Navbar from "./components/Navbar";
-// import {  Content,Sider,Footer} from "antd";
-
 import SortItem from "./components/SortItem";
-import Card from "antd/es/card/Card";
 import Map from "./components/Map";
+import { Col, Row } from "antd";
+import Card from "antd/es/card/Card";
+import CardItem from "./components/CardItem";
 
 const App = () => {
   return (
     <>
+    {/* Navbar */}
       <Row>
         <Col span={24}>
           <Navbar />
         </Col>
       </Row>
-      <Row >
+      <Row>
         <Col span={12}>
           <Map />
         </Col>
-      </Row>
-      <Row>
-        <SortItem />
-      </Row>
-      <Row>
-        <Card />
+        <Col>
+          <Row>
+            <SortItem />
+          </Row>
+          <Row>
+            <CardItem />
+          </Row>
+        </Col>
       </Row>
     </>
   );
