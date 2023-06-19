@@ -14,14 +14,12 @@ const items = [
 const SortItem = () => {
   return (
     <Row justify="space-between" align="middle">
-      <Col >
+      <Col span={6}>
         <p style={{ fontSize: "1.2rem" }}>
           <strong>20</strong> Properties Available
         </p>
       </Col>
-      <Col  style={{
-        marginLeft: "30rem"
-      }}>
+      <Col span={6}>
         <Dropdown
           menu={{
             items,
