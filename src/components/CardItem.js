@@ -10,12 +10,12 @@ import tub from "../images/shover-icon.svg";
 
 const CardItem = () => {
   return (
-    <div style={{ overflowY: "scroll", overflowX: "hidden", height: "80vh" }}>
+    <div style={{ overflowY: "scroll", overflowX: "hidden", height: "90vh" }}>
       <Row span={12} justify="space-evenly" gutter={[16, 16]}>
         {Data.map((item) => {
           return (
             <>
-              <Col span={24}>
+              <Col span={24} >
                 <Row gutter={[16, 16]} justify="start" align="middle">
                   {/* Column 1 for image */}
                   <Col>

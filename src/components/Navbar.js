@@ -7,15 +7,15 @@ const Navbar = () => {
   return (
     <>
       {/* Navbar start */}
-      <Row className="navbar-container" >
+      <Row className="navbar-container" justify="space-around">
         {/* Left section contain the logo of the site */}
-        <Col className="left-navbar-section ">
+        <Col span={12} className="left-navbar-section ">
           <img src={Logo} alt="logo" />
         </Col>
         {/* Right section contain searchbox, filter option like price and no. of bedroom */}
-        <Col className="right-navbar-section" offset={14}>
-          <Row gutter={24} align="middle">
-            <Col>
+        <Col span={12} className="right-navbar-section">
+          <Row gutter={24} align="middle" justify="end">
+            <Col span={12}>
               {/* Search box component instead of input to reduce the code*/}
               <Search
                 placeholder="Search Location..."
@@ -35,7 +35,7 @@ const Navbar = () => {
                         placeholder="10,000"
                         options={[
                           {
-                            label: (<></>),
+                            label: <></>,
                           },
                         ]}
                       />
@@ -58,7 +58,7 @@ const Navbar = () => {
               />
             </Col>
             {/* No. of bedroom filter */}
-            <Col>
+            <Col >
               <Select
                 placeholder="3 Bedrooms"
                 size="large"
