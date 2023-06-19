@@ -2,7 +2,6 @@ import React from "react";
 import { Checkbox, Button, Dropdown, Row, Col } from "antd";
 import sort_icon from "../images/Vector.svg";
 
-
 const items = [
   {
     label: <Checkbox value="1">Low to High</Checkbox>,
@@ -14,18 +13,20 @@ const items = [
 
 const SortItem = () => {
   return (
-    <Row>
-      <Col>
+    <Row justify="space-between" align="middle">
+      <Col >
         <p style={{ fontSize: "1.2rem" }}>
-          <strong >20</strong> Properties Available
+          <strong>20</strong> Properties Available
         </p>
       </Col>
-      <Col offset={16}>
+      <Col  style={{
+        marginLeft: "30rem"
+      }}>
         <Dropdown
           menu={{
             items,
           }}
-          trigger={["click"]}  
+          trigger={["click"]}
         >
           <Button
             type="text"

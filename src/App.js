@@ -1,24 +1,24 @@
 import Navbar from "./components/Navbar";
 import SortItem from "./components/SortItem";
 import Map from "./components/Map";
-import { Col, Row } from "antd";
-import Card from "antd/es/card/Card";
+import { Col, Divider, Row } from "antd";
+import styled from "styled-components"
 import CardItem from "./components/CardItem";
 
 const App = () => {
   return (
     <>
-    {/* Navbar */}
-      <Row>
+      <StyledRow>
         <Col span={24}>
           <Navbar />
         </Col>
-      </Row>
+      </StyledRow>
+      <Divider />
       <Row>
-        <Col span={12}>
+        <StyledCol span={12}>
           <Map />
-        </Col>
-        <Col>
+        </StyledCol>
+        <Col span={12}>
           <Row>
             <SortItem />
           </Row>
@@ -31,4 +31,10 @@ const App = () => {
   );
 };
 
+const StyledRow = styled(Row)`
+margin:1.5rem;
+`
+const StyledCol = styled(Col)`
+height:100vh;
+`
 export default App;
